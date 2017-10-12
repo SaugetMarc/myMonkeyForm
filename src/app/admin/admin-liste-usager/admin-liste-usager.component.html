@@ -1,0 +1,33 @@
+<p>
+  admin-liste-usager works!
+</p>
+
+
+<div>
+  <h3> Ajout d'un nouvel utilisateur</h3>
+  <input name="name" #name type="text"  value="name"/>
+  <input name="username" #name type="text" value="username" />
+  <select name="role" #role>
+    <option value="" selected>Role </option>
+    <option value="admin">administrateur</option>
+    <option value="utilisateur">utilisateur</option>
+    <option value="redacteur">redacteur</option>
+  </select>
+  <input type="button" (click)="ajouteUser()" value="Ajout" />
+</div>
+
+
+
+<div class="liste-app" *ngFor="let usager of usagers">
+    <h3>{{usager.name}}</h3>
+    <span> {{usager.userame}}</span>    
+    <span> {{usager.role}}</span>    
+</div>
+
+
+
+
+
+
+
+
